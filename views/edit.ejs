@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit your user</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit your user</h1>
+    <table>
+        <tr class="for">
+            <th class="for">Id</th>
+            <th class="for">Name</th>
+            <th class="for">Email</th>
+        </tr>
+        <tr class="for">
+            <td class="for"><%=u.id%></td>
+             <td class="for"><%=u.username%></td>
+              <td class="for"><%=u.email%></td>
+        </tr>
+       
+    </table>
+     <form method="post" action="http://localhost:3000/home/edit/<%=u.id%>?_method=PATCH">
+            <label>Enter your updated username :</label>
+            <input type="text" name="username" placeholder="enter new name of user" id="a1"> &nbsp; &nbsp; &nbsp; &nbsp;
+            <label>Enter your updated email :</label>
+            <input type="text" name="email" placeholder="enter new email of user" id="a1"> &nbsp; &nbsp; &nbsp;&nbsp;
+            <button>Save</button>
+        </form>
+</body>
+</html>
